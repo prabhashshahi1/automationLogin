@@ -19,4 +19,8 @@ exports.LoginPage = class LoginPage {
         await this.page.goto('https://the-internet.herokuapp.com/login');
     } 
 
+    async logout(){
+        await this.page.getByRole('link', { name: 'Logout' }).click();
+    }
+
 }
